@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Blood Cell Image</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #00a6ff;
+        }
+        .upload-form {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-form">
+        <h1 style="color: #333;">Upload Blood Cell Image</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="file" name="image" accept="image/*" required>
+            <br>
+            <button type="submit" style="margin-top: 10px; background-color: #007bff; color: #fff; border: none; padding: 8px 20px; cursor: pointer;">Upload and Process</button>
+        </form>
+    </div>
+</body>
+</html>
